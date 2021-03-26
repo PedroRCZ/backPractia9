@@ -31,6 +31,6 @@ app.get('/users/:id', function(req, res) {
         }
     })
 })
-var server = app.listen(8888, function () {
-    console.log('Server is running..'); 
+var server = app.listen(process.env.PORT || 3000, () => {
+    console.log('Server on http://localhost:3000');
 });
